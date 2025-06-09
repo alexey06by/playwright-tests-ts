@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "build": "docker build -t playwright-test-ui .",
+    "run": "docker run playwright-test-ui",
     "test": "npx playwright test"
   },
   "repository": {
