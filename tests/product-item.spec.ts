@@ -11,19 +11,20 @@ test.describe('Product-item page', async()=> {
         await page.click('.inventory_item:nth-child(3) .inventory_item_name');
     });
     test('Should add product to cart', async ({ page }) => {
-        await page.click('.btn_primary');        
-        const shopping_cart_badge = page.locator('.shopping_cart_badge');
+        await page.click('.btn_primary');
         const item_name = await page.innerText('.inventory_details_name');
- 
+
+        const shopping_cart_badge = page.locator('.shopping_cart_badge'); 
         await expect(shopping_cart_badge).toBeVisible();
         await expect(shopping_cart_badge).toContainText('1');
 
         await page.click('.shopping_cart_link');
-        const inventory_item = page.locator('.inventory_item_name');        
 
-        await expect(page).toHaveURL(/cart\.htm/);
+        const inventory_item = page.locator('.inventory_item_name');     
         await expect(inventory_item).toBeVisible();
         await expect(inventory_item).toContainText(item_name);
+        
+        await expect(page).toHaveURL(/cart\.htm/);
         await expect(shopping_cart_badge).toBeVisible();
         await expect(shopping_cart_badge).toContainText('1');
     });

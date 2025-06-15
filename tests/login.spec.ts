@@ -16,8 +16,8 @@ test.describe('Login page', async()=> {
         await page.fill('#user-name', 'invalid_login');   
         await page.fill('#password', 'invalid_password');
         await page.click('#login-button');
-        const errorMessage = page.locator('[data-test="error"]');
 
+        const errorMessage = page.locator('[data-test="error"]');
         await expect(errorMessage).toBeVisible();
         await expect(errorMessage).toContainText('Username and password do not match any user in this service');        
     });

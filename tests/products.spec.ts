@@ -11,16 +11,17 @@ test.describe('Products page', async()=> {
     });
     test('Should add product to cart', async ({ page }) => {
         await page.click('.inventory_list>:first-child button');
-        const shopping_cart_badge = page.locator('.shopping_cart_badge');
         const item_name = await page.innerText('.inventory_list>:first-child .inventory_item_name');
- 
+
+        const shopping_cart_badge = page.locator('.shopping_cart_badge'); 
         await expect(shopping_cart_badge).toBeVisible();
         await expect(shopping_cart_badge).toContainText('1');
 
         await page.click('.shopping_cart_link');
-        const inventory_item = page.locator('.inventory_item_name');        
 
         await expect(page).toHaveURL(/cart\.htm/);
+
+        const inventory_item = page.locator('.inventory_item_name');              
         await expect(inventory_item).toBeVisible();
         await expect(inventory_item).toContainText(item_name);
     });
@@ -32,16 +33,17 @@ test.describe('Products page', async()=> {
         const removeButton = '(//button[@class="btn_secondary btn_inventory"])[1]';   
         await page.click(removeButton);
         await page.click(removeButton);
-        await page.click(removeButton);                                
-        const shopping_cart_badge = page.locator('.shopping_cart_badge');
- 
+        await page.click(removeButton);  
+
+        const shopping_cart_badge = page.locator('.shopping_cart_badge'); 
         await expect(shopping_cart_badge).toBeHidden();
 
         await page.click('.shopping_cart_link');
+
         const inventory_item = page.locator('.inventory_item_name');        
+        await expect(inventory_item).toBeHidden();
 
         await expect(page).toHaveURL(/cart\.htm/);
-        await expect(inventory_item).toBeHidden();
         await expect(shopping_cart_badge).toBeHidden();
     });
 })
