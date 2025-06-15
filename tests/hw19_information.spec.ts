@@ -63,6 +63,7 @@ test.describe('Checkout: Your Information page', async()=> {
         
         const numberOfItems = await page.locator('.cart_item').count();
         expect(numberOfItems).toBe(1);
+        
         await page.context().tracing.stop({path: 'trace.zip'});
     });
     test.only('Should cancel checkout and go back to cart', async ({ page }) => {

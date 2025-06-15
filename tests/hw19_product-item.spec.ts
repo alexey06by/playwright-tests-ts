@@ -24,6 +24,7 @@ test.describe('Product-item page', async()=> {
 
         const shoppingCartBadge = page.locator('.shopping_cart_badge'); 
         await expect(shoppingCartBadge).toBeHidden();
+
         await expect(addButton).toBeVisible();
         
         const removeButton = page.locator('.btn_secondary');
@@ -36,6 +37,7 @@ test.describe('Product-item page', async()=> {
         
         const inventoryItem = page.locator('.inventory_item_name');           
         await expect(inventoryItem).toBeHidden();
+        
         await expect(shoppingCartBadge).toBeHidden();
     });
 })
