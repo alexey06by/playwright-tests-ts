@@ -10,7 +10,7 @@ test.describe('Product-item page', async()=> {
         await page.click('#login-button');
         await page.click('.inventory_item:nth-child(3) .inventory_item_name');
     });
-    test.only('Should add product to cart', async ({ page }) => {
+    test('Should add product to cart', async ({ page }) => {
         await page.click('.btn_primary');        
         const shopping_cart_badge = page.locator('.shopping_cart_badge');
         const item_name = await page.innerText('.inventory_details_name');
