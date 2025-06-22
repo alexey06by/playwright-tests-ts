@@ -2,6 +2,7 @@
   "name": "playwright-tests-ts",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "build": "docker build -t playwright-test-ui .",
     "run": "docker run playwright-test-ui",
