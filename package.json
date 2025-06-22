@@ -1,0 +1,26 @@
+{
+  "name": "playwright-tests-ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "docker build -t playwright-test-ui .",
+    "run": "docker run playwright-test-ui",
+    "test": "npx playwright test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alexey06by/playwright-tests-ts.git"
+  },
+  "author": "Alexey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alexey06by/playwright-tests-ts/issues"
+  },
+  "homepage": "https://github.com/Alexey06by/playwright-tests-ts#readme",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.30",
+    "dotenv": "^16.5.0"
+  }
+}
