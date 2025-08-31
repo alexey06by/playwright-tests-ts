@@ -5,7 +5,7 @@
       "value": "problem_user",
       "domain": "www.saucedemo.com",
       "path": "/",
-      "expires": 1750608115,
+      "expires": 1756651520,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
@@ -17,11 +17,11 @@
       "localStorage": [
         {
           "name": "backtrace-guid",
-          "value": "0c33fa26-b9bb-421e-9290-addd25aadcfe"
+          "value": "47f27ff5-0807-4749-9b3a-65b5afe2141d"
         },
         {
           "name": "backtrace-last-active",
-          "value": "1750607514309"
+          "value": "1756650919981"
         }
       ]
     }

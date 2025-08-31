@@ -3,7 +3,7 @@ import { test } from '../../fixtures/testIdGenerator';
 import dotenv from 'dotenv'
 dotenv.config()
 
-test.only("Should add random item to cart", async({page, randomItem})=>{
+test("Should add random item to cart", async({page, randomItem})=>{
     await page.goto('https://www.saucedemo.com/');
     await page.fill('#user-name', process.env.USER_NAME || '');   
     await page.fill('#password', process.env.PASSWORD || '');

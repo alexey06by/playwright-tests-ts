@@ -1,5 +1,5 @@
 import { test,expect } from '@playwright/test';
-import { webSiteData } from "../test-data/TestData.ts";
+import { webSiteData } from "./test-data/TestData.ts";
 
 for (const {testName, pageURL} of webSiteData){
     test(`Should load ${testName} page and display website logo`, async({page})=>{

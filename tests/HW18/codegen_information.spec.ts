@@ -3,7 +3,7 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 test.describe('Checkout:Your Information page', async ()=>{
-    test('Snould proceed to the second step of checkout', async ({ page }) => {
+    test('Should proceed to the second step of checkout', async ({ page }) => {
         await page.goto('https://www.saucedemo.com/v1/');
         await page.locator('[data-test="username"]').fill(process.env.USER_NAME || '');
         await page.locator('[data-test="password"]').fill(process.env.PASSWORD || '');

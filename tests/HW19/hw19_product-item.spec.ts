@@ -10,7 +10,7 @@ test.describe('Product-item page', async()=> {
         await page.fill('#password', process.env.PASSWORD || '');
         await page.click('#login-button');
     });
-    test.only('Should remove product from cart', async ({ page }) => {
+    test('Should remove product from cart', async ({ page }) => {
         await page.click('.inventory_list>:first-child button');  
         await page.click('.inventory_item:nth-child(1) .inventory_item_name');
 

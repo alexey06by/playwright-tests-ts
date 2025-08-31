@@ -10,7 +10,7 @@ export const webSiteData = [
         pageURL: '/cart.html'
     },
     {
-        testName: 'Logout',        
-        pageURL: '/logout.html'
+        testName: 'Checkout',        
+        pageURL: '/checkout-step-one.html'
     }        
 ]

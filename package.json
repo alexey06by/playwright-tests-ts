@@ -6,7 +6,10 @@
   "scripts": {
     "build": "docker build -t playwright-test-ui .",
     "run": "docker run playwright-test-ui",
-    "test": "npx playwright test"
+    "hw18": "npx playwright test tests/HW18/",
+    "hw19": "npx playwright test tests/HW19/",
+    "hw20": "npx playwright test tests/HW20/",
+    "hw21": "npx playwright test tests/HW21/"
   },
   "repository": {
     "type": "git",

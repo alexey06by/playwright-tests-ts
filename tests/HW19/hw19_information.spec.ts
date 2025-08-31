@@ -13,7 +13,7 @@ test.describe('Checkout: Your Information page', async()=> {
         await page.click('.shopping_cart_link');      
         await page.click('.checkout_button');   
     });
-    test.only('Should have validations for invalid data', async ({ page }) => {
+    test('Should have validations for invalid data', async ({ page }) => {
         await page.context().tracing.start({screenshots: true, snapshots: true});
         await page.click('[value="CONTINUE"]');  
 
@@ -66,7 +66,7 @@ test.describe('Checkout: Your Information page', async()=> {
         
         await page.context().tracing.stop({path: 'trace.zip'});
     });
-    test.only('Should cancel checkout and go back to cart', async ({ page }) => {
+    test('Should cancel checkout and go back to cart', async ({ page }) => {
         await page.click('.cart_cancel_link');
         
         await expect(page).toHaveTitle('Swag Labs');
