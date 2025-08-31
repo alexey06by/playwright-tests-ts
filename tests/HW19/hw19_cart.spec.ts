@@ -10,7 +10,7 @@ test.describe('Cart page', async()=> {
         await page.fill('#password', process.env.PASSWORD || '');
         await page.click('#login-button');
     });
-    test.only('Should add 6 products to cart', async ({ page }) => {
+    test('Should add 6 products to cart', async ({ page }) => {
         const addButton = '(//button[@class="btn_primary btn_inventory"])[1]';        
         await page.click(addButton);
         await page.click(addButton);
@@ -26,7 +26,7 @@ test.describe('Cart page', async()=> {
         const numberOfItems = await page.locator('.cart_item').count();
         expect(numberOfItems).toBe(6);
     });
-    test.only('Should go back to Products page', async ({ page }) => {
+    test('Should go back to Products page', async ({ page }) => {
         const addButton = '(//button[@class="btn_primary btn_inventory"])[1]';        
         await page.click(addButton);
         await page.click('.shopping_cart_link'); 
